@@ -1,6 +1,6 @@
 module ApplicationHelper
   def max_width
-    if controller_name = "texts" && action_name == "show"
+    if controller_name == "texts" && action_name == "show"
       "mw-md"
       # Devise 導入後にコメントアウト解除
       # elsif devise_controller?
