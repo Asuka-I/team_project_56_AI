@@ -19,3 +19,6 @@ end
 %w[texts movies].each do |table_name|
   ActiveRecord::Base.connection.execute("TRUNCATE TABLE #{table_name} RESTART IDENTITY CASCADE")
 end
+
+ImportCsv.text_data
+ImportCsv.movie_data
