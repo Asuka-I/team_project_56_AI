@@ -1,7 +1,6 @@
 .text-page-title {
   font-size: 2rem;
   padding: 20px 0 10px 0;
-  text-align: center;
 }
 
 .row {
@@ -12,19 +11,8 @@
       margin: 0 auto;
       max-width: 376px;
       height: 370px;
-      .card-header {
-        .card-img-top {
-          max-width: 100%;
-          height: auto;
-        }
-      }
       .card-body {
         padding: 20px;
-        .read-through-box {
-          .btn {
-            width: 100%;
-          }
-        }
         .card-title {
           margin: 30px 0 16px 0;
           font-size: 0.875rem;
