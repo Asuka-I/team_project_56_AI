@@ -4,20 +4,13 @@
 }
 
 .row {
+  margin: 0 -15px;
   .card-box {
-    padding: 0 9px 0 9px;
-    margin-bottom: 50px;
+    padding: 0 15px;
     .card {
       margin: 0 auto;
       max-width: 376px;
       height: 370px;
-      .card-body {
-        padding: 20px;
-        .card-title {
-          margin: 30px 0 16px 0;
-          font-size: 0.875rem;
-        }
-      }
     }
   }
 }
