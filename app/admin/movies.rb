@@ -26,7 +26,7 @@ ActiveAdmin.register Movie do
     f.inputs do
       input :genre, as: :select, collection: Movie.genres_i18n.invert
       input :title
-      input :text
+      input :url
     end
     f.actions
   end
