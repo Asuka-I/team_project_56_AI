@@ -1,15 +1,17 @@
 <div class="card-box col-12 col-md-6 col-lg-4">
+  <%= link_to text_path(text) do %>
     <div class="card border-dark mb-3">
       <div class="card-header p-0">
         <img class="img-fluid" src="https://d5izmuz0mcjzz.cloudfront.net/texts/no_image.jpg" alt="スダンダードコースのイメージ画像">
       </div>
       <div class="card-body text-dark">
         <div class="read-through-box mb-1">
-          <a href="#" class="btn btn-block btn-secondary">読破済みにする</a>
+          <button class="btn btn-block btn-secondary">読破済みにする</button>
         </div>
         <p class="card-title mt-3 mb-3"><%= text.title %></p>
         <p class="card-text">【<%= text.genre_i18n %>】</p>
       </div>
     </div>
+  <% end %>
 </div>
 
