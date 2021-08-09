@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   root "texts#index"
   resources :texts, only: [:index, :show]
   resources :movies, only: [:index] do
-    resource :whatch_progresses, only: [:create, :destroy]
+    resource :watch_progresses, only: [:create, :destroy]
   end
 end

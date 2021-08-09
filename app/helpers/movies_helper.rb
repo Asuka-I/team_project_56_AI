@@ -9,8 +9,4 @@ module MoviesHelper
       allowfullscreen: true
     )
   end
-
-  def watched_by?(user)
-    watch_progresses.exists?(user_id: user.id)
-  end
 end

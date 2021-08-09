@@ -1,5 +1,6 @@
 class Movie < ApplicationRecord
   has_many :watch_progresses, dependent: :destroy
+  has_many :whatch_progressesed_users, through: :watch_progresses, source: :user
 
   with_options presence: true do
     validates :genre
@@ -15,4 +16,8 @@ class Movie < ApplicationRecord
     php: 5
   }
   RAILS_GENRE_LIST = %w[basic git ruby rails].freeze
+
+  def watched_by?(user)
+    watch_progresses.exists?(user_id: user.id)
+  end
 end
