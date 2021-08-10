@@ -16,6 +16,7 @@ class Movie < ApplicationRecord
     php: 5
   }
   RAILS_GENRE_LIST = %w[basic git ruby rails].freeze
+  PHP_GENRE_LIST = %w[php].freeze
 
   def watched_by?(user)
     watch_progresses.any? { |watch_progress| watch_progress.user_id == user.id }

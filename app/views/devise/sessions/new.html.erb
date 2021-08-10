@@ -21,4 +21,5 @@
   </div>
 <% end %>
 <hr class="my-5">
-<%= link_to "アカウント登録", new_user_registration_path, class: "btn btn-block btn-secondary" %>
+<%= link_to "ゲストログイン (閲覧用)", users_guest_sign_in_path, method: :post, class: "btn btn-block btn-success" %>
+<%= link_to "アカウント登録", new_user_registration_path, class: "btn btn-block btn-secondary mt-4" %>
