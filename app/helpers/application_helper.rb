@@ -16,4 +16,12 @@ module ApplicationHelper
       "Ruby/Rails 動画"
     end
   end
+
+  def text_movie
+    if params[:genre] == "php"
+      "PHP テキスト教材"
+    else
+      "Ruby/Railsテキスト教材"
+    end
+  end
 end
