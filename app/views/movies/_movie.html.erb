@@ -7,9 +7,9 @@
     </div>
     <div class="card-body text-dark movie-body">
       <% if movie.watched_by?(current_user) %>
-        <a class="btn btn-primary btn-block mb-1"><%= link_to "視聴済を解除", movie_watch_progresses_path(movie), method: :delete %></a>
+        <%= link_to "視聴済を解除", movie_watch_progresses_path(movie), method: :delete, remote: true, class: "btn btn-primary btn-block mb-1" %>
       <% else %>
-        <a class="btn btn-secondary btn-block mb-1"><%= link_to "視聴済にする", movie_watch_progresses_path(movie), method: :post %></a>
+        <%= link_to "視聴済にする", movie_watch_progresses_path(movie), method: :post, remote: true, class: "btn btn-secondary btn-block mb-1" %>
       <% end %>
       <p class="card-text movie-title mt-3 mb-3">Lv.<%= movie_counter + 1 %> : <%= movie.title %></p>
     </div>
