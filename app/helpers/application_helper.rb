@@ -17,7 +17,7 @@ module ApplicationHelper
     end
   end
 
-  def text_movie
+  def text_title
     if params[:genre] == "php"
       "PHP テキスト教材"
     else
