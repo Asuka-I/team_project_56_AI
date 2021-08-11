@@ -5,7 +5,7 @@
         <img class="img-fluid" src="https://d5izmuz0mcjzz.cloudfront.net/texts/no_image.jpg" alt="スダンダードコースのイメージ画像">
       </div>
       <div class="card-body text-dark">
-        <p>
+        <p id="text-<%= text.id %>">
           <% if text.read_by?(current_user) %>
             <%= render "disread_progress", text: text %>
           <% else %>
