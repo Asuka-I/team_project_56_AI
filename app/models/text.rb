@@ -16,6 +16,7 @@ class Text < ApplicationRecord
     php: 5
   }
   RAILS_GENRE_LIST = %w[basic git ruby rails].freeze
+  PHP_GENRE_LIST = %w[php].freeze
 
   def read_by?(user)
     read_progresses.any? { |read_progress| read_progress.user_id == user.id }
