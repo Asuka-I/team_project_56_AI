@@ -1,1 +1,1 @@
-document.getElementById('movie-<%= @movie.id %>').innerHTML = '<%= j render("movies/watched", movie: @movie) %>'
+document.getElementById('movie-<%= @movie.id %>').innerHTML = '<%= j render("movies/not_watched", movie: @movie) %>'
