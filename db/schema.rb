@@ -48,6 +48,16 @@ ActiveRecord::Schema.define(version: 20_210_806_000_951) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "read_progresses", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "text_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["text_id"], name: "index_read_progresses_on_text_id"
+    t.index ["user_id", "text_id"], name: "index_read_progresses_on_user_id_and_text_id", unique: true
+    t.index ["user_id"], name: "index_read_progresses_on_user_id"
+  end
+
   create_table "texts", force: :cascade do |t|
     t.integer "genre", default: 0, null: false
     t.string "title", null: false
@@ -77,6 +87,6 @@ ActiveRecord::Schema.define(version: 20_210_806_000_951) do
 
   add_foreign_key "watch_progresses", "movies"
   add_foreign_key "watch_progresses", "users"
-  add_foreign_key "whatch_progresses", "movies"
-  add_foreign_key "whatch_progresses", "users"
+  add_foreign_key "read_progresses", "texts"
+  add_foreign_key "read_progresses", "users"
 end
