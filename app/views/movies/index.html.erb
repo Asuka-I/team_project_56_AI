@@ -2,6 +2,6 @@
   <h1><%= movie_title %></h1>
 </div>
 <div class= "row m-2">
-  <%= render partial: "movie", collection: @movies %>
+  <%= render partial: "movie", locals: { movie: @movie }, collection: @movies %>
 </div>
 <%= paginate @movies %>
