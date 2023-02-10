@@ -1,0 +1,22 @@
+databases:
+  - name: team_project_56_AI _db
+    databaseName: team_project_56_AI _production
+    region: singapore
+    plan: free
+
+services:
+  - type: web
+    name: team_project_56_AI _web
+    env: ruby
+    region: singapore
+    plan: free
+    branch: main
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: team_project_56_AI _db
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
